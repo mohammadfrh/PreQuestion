@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:seekarc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="86dp"
+        android:layout_marginEnd="86dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مشاوره و بررسی اسناد مدارک"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="61dp"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imageview_top_seekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/textview_title"
+            android:background="@drawable/image_in_seekbar" />
+
+        <com.triggertrap.seekarc.SeekArc
+            android:id="@+id/seekArc"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            seekarc:arcColor="#EBEBEB"
+            seekarc:arcWidth="5dp"
+            seekarc:clockwise="true"
+            seekarc:max="500"
+            seekarc:progressColor="#EBAC3A"
+            seekarc:rotation="95"
+            seekarc:startAngle="0"
+            seekarc:sweepAngle="175"
+            seekarc:progress="0"
+            seekarc:thumb="@drawable/custom_seek_arc_control_selector"
+            seekarc:touchInside="true" />
+
+        <View
+            android:id="@+id/viewtest"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:clickable="false"/>
+
+    </RelativeLayout>
+
+    <moe.feng.common.view.breadcrumbs.BreadcrumbsView
+        android:id="@+id/breadcrumbs_view"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:CustomTextSize="12sp"
+        app:SelectedTextColor="@color/progress_gray"
+        app:UnSelectedTextColor="@color/colorAccent" />
+
+
+    <TextView
+        android:id="@+id/textView_title_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="#000"
+        android:textSize="14dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_radio_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/scrollbar_style"
+        android:scrollbarThumbVertical="@color/colorBlack"
+        android:scrollbarTrackVertical="@color/colorBlack"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        />
+
+</LinearLayout>

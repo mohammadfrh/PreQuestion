@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/layoutContainer"
+    tools:context=".View.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup_questions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/choice_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:button="@drawable/radio_background"
+            android:textColor="@drawable/radio_text_selected"
+            android:textSize="12sp"
+            android:layoutDirection="rtl"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="28dp"
+            android:paddingStart="10dp"
+            android:paddingLeft="5dp" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageview_more_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_more_detail"
+        app:srcCompat="@drawable/ic_more_detail"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCD9D9"
+        android:layout_below="@+id/radioGroup_questions"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>
